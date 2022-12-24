@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+<style>
+
+  
+</style>
+
+</head>
+<body>
+
+ 
+  
+  <div class="two alt-two">
+    <h1>Projet Data Engineering 
+      <span> Python, Flask, GitHub, Docker </span>
+    </h1>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <td>Informations sur la partie ML</td>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nom du dataSet </td>
+        <td> Dummy Data HSS </td>
+
+      </tr>
+      <tr>
+        <td>Algorithme </td>
+        <td>Regression Linéaire</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+
+
+  
+    <button id="MyButton" class="favorite styled" type="button"> afficher le score ! </button>
+
+    <p id="MyHeading"></p>
+
+    <script>
+      //Select button by id
+      const MyButton = document.getElementById('MyButton');
+      //Add on click listener for button
+      MyButton.addEventListener('click', function() {
+          //Select (h1) heading by id, and then change it's value to (bananas)
+          document.getElementById('MyHeading').innerText = "Voici le résultat du modèle"
+      })
+  </script>
+   
+</body>
+</html> 
+
+
+
+
+
