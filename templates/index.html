@@ -39,22 +39,28 @@
     </tbody>
   </table>
 
+  <p> {{testhtmlV}} </p>
+
   <br>
   <br>
 
 
   
-    <button id="MyButton" class="favorite styled" type="button"> afficher le score ! </button>
-
+    <button id="MyButton" class="favorite styled" type="button"> Regression Linéaire  ! </button>
     <p id="MyHeading"></p>
 
+    <button id="MyButton2" class="favorite styled" type="button"> Random Forest  ! </button>
+    <p id="MyHeading2"></p>
+
     <script>
-      //Select button by id
       const MyButton = document.getElementById('MyButton');
-      //Add on click listener for button
       MyButton.addEventListener('click', function() {
-          //Select (h1) heading by id, and then change it's value to (bananas)
-          document.getElementById('MyHeading').innerText = "Voici le résultat du modèle"
+          document.getElementById('MyHeading').innerText = "{{scoreRegressionHtml}}"
+      })
+
+      const MyButton2 = document.getElementById('MyButton2');
+      MyButton2.addEventListener('click', function() {
+          document.getElementById('MyHeading2').innerText = "{{scoreRandomHtml}}"
       })
   </script>
    
