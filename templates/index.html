@@ -52,6 +52,10 @@
     <button id="MyButton2" class="favorite styled" type="button"> Random Forest  ! </button>
     <p id="MyHeading2"></p>
 
+    <button id="MyButton3" class="favorite styled" type="button"> Arbre de Décision  ! </button>
+    <p id="MyHeading3"></p>
+
+
     <script>
       const MyButton = document.getElementById('MyButton');
       MyButton.addEventListener('click', function() {
@@ -62,8 +66,16 @@
       MyButton2.addEventListener('click', function() {
           document.getElementById('MyHeading2').innerText = "{{scoreRandomHtml}}"
       })
+
+
+      const MyButton3 = document.getElementById('MyButton3');
+      MyButton2.addEventListener('click', function() {
+          document.getElementById('MyHeading3').innerText = "{{scoreDecisionTreeHtml}}"
+      })
       
   </script>
+   
+
    
 </body>
 </html> 
