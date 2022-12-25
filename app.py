@@ -15,7 +15,8 @@ app = Flask(__name__)
 
 def fitgen():
 
-    df = pd.read_csv("C:/Users/Claas/Downloads/Dummy Data HSS.csv" )
+    df = pd.read_csv("/app/data/Dummy_Data_HSS.csv")
+
     df = df.fillna(df.mean())
     df = pd.get_dummies(df) 
     df = df[['TV', 'Radio', 'Social Media', 'Influencer_Macro',
