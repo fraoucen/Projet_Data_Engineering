@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 def fitgen():
 
-    df = pd.read_csv("/home/aghiles/projets/Projet_Data_Engineering/data/Dummy_Data_HSS.csv")
+    df = pd.read_csv("/app/data/Dummy_Data_HSS.csv")
 
     df = df.fillna(df.mean())
     df = pd.get_dummies(df) 
