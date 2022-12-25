@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.tree import DecisionTreeRegressor
+
 from sklearn.metrics import r2_score
 
 
@@ -34,7 +36,19 @@ def fitgen():
     y_pred_rf = rf_regressor.predict(x_test) 
     scoreRandomForest = r2_score(y_test, y_pred_rf)
 
-    return [scoreRegression, scoreRandomForest]
+
+    dt_regressor = DecisionTreeRegressor()
+    dt_regressor.fit(x_train, y_test)
+    y_pred_dt = dt_regressor.predict(x_test)
+    scoreDecisionTree = r2_score(y_test, y_pred_dt)
+
+
+
+
+    return [scoreRegression, scoreRandomForest, scoreDecisionTree]
+
+
+
 
 
 
@@ -44,8 +58,11 @@ def index():
     list = fitgen()
     scoreRegression = list[0]
     scoreRandomForest = list[1]
+    scoreDecisionTree = list[2]
 
-    return render_template('index.html', scoreRegressionHtml = scoreRegression , scoreRandomHtml = scoreRandomForest )
+    return render_template('index.html', scoreRegressionHtml = scoreRegression , 
+                                         scoreRandomHtml = scoreRandomForest ,
+                                         scoreDecisionTreeHtml = scoreDecisionTree)
 
 
 if __name__ == "__main__":
