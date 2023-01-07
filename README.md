@@ -36,7 +36,7 @@ Il y a deux manières possible de lancer notre application flask en local :
 
     1- La première manière la plus fastidieuse consiste à refaire quasiment toutes les étapes que l'on a suivi afin de construire notre image et lancer un conteneur docker basé sur cette image pour exécuter notre appliaction.
     
-    2- La deuxième manière est la manière à préviligier, qui consiste à seulement récupérer notre image docker déjà prête depuis dockerhub et lancer le conteneur qui exécute notre application.
+    2- La deuxième manière est la manière à préviligier, qui consiste à seulement récupérer notre image docker qui est sur le dockerhub que l'on a construit et push auparavant, cette image est déjà prête il suffit juste de lancer le conteneur qui exécute notre application.
 
 Les étapes à suivre afin de reconstruire  l'image Docker de A à Z et de créer un conteneur à partir de cette image pour lancer notre application Flask  (la première façon): 
 
