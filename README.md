@@ -41,7 +41,7 @@ Les étapes à suivre afin de reconstruire  l'image Docker de A à Z et de crée
 
     1- faire un git clone du projet : git clone git@github.com:fraoucen/Projet_Data_Engineering.git
     
-    2- S'assurer que le deamon docker est connecté au dockerhub pour pouvoir pull une image python:3.8.16 qui est l'image de base à partir de laquelle nous avons contruit notre propre image.
+    2- S'assurer que le deamon docker est connecté au dockerhub pour pouvoir pull une image python:3.8.16 qui est l'image de base à partir de laquelle nous avons contruit notre propre image (docker login registry-1.docker.io ) (il faut utiliser son identifiant et mot de passe créé auparavant sur dockerhub)
     
     3- se mettre à la racine du projet git ou se trouve notre Dockerfile
     
@@ -55,7 +55,7 @@ Les étapes à suivre afin de reconstruire  l'image Docker de A à Z et de crée
 
 Les étapes à suivre afin d'éviter de reconstruire l'image et d'utiliser une image déjà prête pour créer un conteneur à partir de cette image pour lancer notre application Flask  (la deuxième façon):
     
-    1- S'assurer que le deamon docker est connecté au dockerhub pour pouvoir pull l'image
+    1- S'assurer que le deamon docker est connecté au dockerhub pour pouvoir pull l'image (docker login registry-1.docker.io ) (il faut utiliser son identifiant et mot de passe créé auparavant sur dockerhub)
 
     2- Pull l'image : docker pull aghilesizou/projet_data_engineering_repository:latest
 
@@ -64,5 +64,7 @@ Les étapes à suivre afin d'éviter de reconstruire l'image et d'utiliser une i
     4- Lancer le script portscan.sh (ex : ./portscan.sh 127.0.0.1 5000 5020 pour voir les ports qui sont utilisés parmi les ports numurotés de 5000 à 5020)
 
     5- Créer un conteneur dans lequel l'application s'exécute (ici le port 5000 sur le host n'est pas utilisé) : docker run -d --name nom_du_conteneur  -v nom_du_volume:/app/ -p 5000:5000 nom_de_image_docker
+
+NB : Le script qui lance l'application à l'intérieur du conteneur, c'est le script bash entrypoint.sh, ce dernier est exécuté au lancement du conteneur grace à l'instruction ENTRYPOINT ajouté dans le Dockerfile pour la création de l'image
 
 
