@@ -65,6 +65,6 @@ Les étapes à suivre afin d'éviter de reconstruire l'image et d'utiliser une i
 
     5- Créer un conteneur dans lequel l'application s'exécute (ici le port 5000 sur le host n'est pas utilisé) : docker run -d --name nom_du_conteneur  -v nom_du_volume:/app/ -p 5000:5000 nom_de_image_docker
 
-NB : Le script qui lance l'application à l'intérieur du conteneur, c'est le script bash entrypoint.sh, ce dernier est exécuté au lancement du conteneur grace à l'instruction ENTRYPOINT ajouté dans le Dockerfile pour la création de l'image
+NB : Le script qui lance l'application à l'intérieur du conteneur, est le script bash "entrypoint.sh", ce dernier est exécuté au lancement du conteneur grace à l'instruction ENTRYPOINT ajouté dans le Dockerfile pour la création de l'image.
 
 
