@@ -11,23 +11,22 @@ Data Engineering
 
 1 - Flask / Machine Learning 
 
-Les étapes à implémenter dans la partie machine learning sont (davantage de fonctionnalités seront éventuellement ajoutées) : 
 
-    -   Chargement de données depuis un fichier local 
-    -   Transformation/Preprocessing des données 
-    -   Application d'un modèle de regression linéaire 
-    -   Première évaluation du modèle 
+    -   Lecture d'un fichier CSV et prétraitement des données: le fichier CSV est lu et les valeurs manquantes sont remplacées par la moyenne. Des variables catégoriques sont également converties en variables binaires.
 
+    -   Entraînement et évaluation de trois modèles de machine learning: un modèle de régression linéaire, un modèle de forêt aléatoire et un modèle d'arbre de décision sont entraînés et évalués sur les données en utilisant la fonction de score R².
+
+    -   Mise en place de l'application web: l'application web est créée en utilisant le framework Flask et les résultats des modèles de machine learning sont affichés sur une page web accessible via un navigateur.
 
 
 
 2 - Github 
 
-les étapes réalisées à présent :
-
-    -   Création d'un repository public 
-    -   Initialisation Git 
-    -   Commit du fichier README
+    -   Créer un nouveau repository sur GitHub et cloner le repository en local.
+    -   Créer des nouvelles branches pour dévelloper des nouvelles fonctionnalité séparement (chaque membre du groupe apporte des améliorations) 
+    -   Pousser les changements sur la branche distante
+    -   Créer un pull sur la branche principale 
+    -   Vérifier et fusionner les changements avec la branche principale
 
 
 3 - Docker
