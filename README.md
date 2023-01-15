@@ -41,7 +41,7 @@ Les étapes à suivre afin de reconstruire  l'image Docker de A à Z et de crée
 
     1- faire un git clone du projet : git clone git@github.com:fraoucen/Projet_Data_Engineering.git
     
-    2- S'assurer que le deamon docker est connecté au dockerhub pour pouvoir pull une image python:3.8.16 qui est l'image de base à partir de laquelle nous avons contruit notre propre image (docker login registry-1.docker.io ) (il faut utiliser son identifiant et mot de passe créé auparavant sur dockerhub)
+    2- Pull une image python:3.8.16 qui est l'image de base à partir de laquelle nous avons contruit notre propre image.
     
     3- se mettre à la racine du projet git ou se trouve notre Dockerfile
     
